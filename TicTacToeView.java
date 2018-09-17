@@ -10,13 +10,7 @@ import java.util.*;
 import java.util.List;
 
 /**
- * This class is the view of our tic tac toe game
- * our view has a message area, and a list of buttons
- * the buttons will be arranges in a ROWS_IN_BUTTON_PANEL x COLUMNS_IN_BUTTON_PANEL Gris
- * Players will use the buttons to make their next move.
- * All events will be passed to the controller
- *
- * You do not need to (and should not) make any changes to this code, but you do need to understand much of what is happening
+ * This class is the visual of tic tac toe game
  */
 
 public final class TicTacToeView extends JFrame implements ActionListener {
@@ -123,9 +117,6 @@ public final class TicTacToeView extends JFrame implements ActionListener {
     }
 
     /**
-     * Register argument as observer/listener of this; this must be done first,
-     * before any other methods of this class are called.
-     *
      * @param c
      *            controller to register
      * @requires c is a valid controller for this view
@@ -148,14 +139,7 @@ public final class TicTacToeView extends JFrame implements ActionListener {
          * by the user
          */
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        /*
-         * Determine which event has occurred that we are being notified of by
-         * this callback; in this case, the source of the event (i.e, the widget
-         * calling actionPerformed) is all we need because only buttons are
-         * involved here, so the event must be a button press; in each case,
-         * tell the controller to do whatever is needed to update the model and
-         * to refresh the view
-         */
+
         Object source = event.getSource();
 
         //is the source one of our buttons?
@@ -169,9 +153,6 @@ public final class TicTacToeView extends JFrame implements ActionListener {
             int c =  index % COLUMNS_IN_BUTTON_PANEL;
             //call the controller event
             controller.processButtonClick(r, c);
-
-
-
         }
         /*
          * Set the cursor back to normal (because we changed it at the beginning

@@ -10,8 +10,7 @@ import java.util.*;
 import java.util.List;
 
 /**
- * This is the view for our game set up screen.
- * You do not need to make changes to this code file
+ * This is the visual component file
  */
 public final class GameSetupScreen extends JFrame implements ActionListener{
 
@@ -101,19 +100,10 @@ public final class GameSetupScreen extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent event) {
         /*
-         * Set cursor to indicate computation on-going; this matters only if
-         * processing the event might take a noticeable amount of time as seen
-         * by the user
+         * Set cursor to indicate computation on-going
          */
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        /*
-         * Determine which event has occurred that we are being notified of by
-         * this callback; in this case, the source of the event (i.e, the widget
-         * calling actionPerformed) is all we need because only buttons are
-         * involved here, so the event must be a button press; in each case,
-         * tell the controller to do whatever is needed to update the model and
-         * to refresh the view
-         */
+
         Object source = event.getSource();
 
         //is the source submit button
@@ -165,10 +155,7 @@ public final class GameSetupScreen extends JFrame implements ActionListener{
 
 
         }
-        /*
-         * Set the cursor back to normal (because we changed it at the beginning
-         * of the method body)
-         */
+
         this.setCursor(Cursor.getDefaultCursor());
         }
 

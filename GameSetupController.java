@@ -1,17 +1,10 @@
 package cpsc2150.hw5;
 
 /**
- * Created by kplis on 4/5/2018.
+ * Created by tianyiz on 4/5/2018.
  *
- * This is the controller for our Game Setup Screen It validates input
- *
- * If input is valid it creates our tic tac toe game
- *
- * If you are using GameBoardMem instead of GameBoardFast you will need to change the constructor call at the
- * end of the proccessButtonClick method
- *
- * Besides that no other code needs to be changed
- */
+ * This is the controller for Game Setup Screen It validates input
+ **/
 public class GameSetupController {
     private GameSetupScreen view;
     private int max_size = 20;
@@ -72,11 +65,6 @@ public class GameSetupController {
         {
             view.closeScreen();
 
-            /*
-            ************************************************************
-            If you are using GameBoardMem instead of GameBoard fast, you will need to change the constructor call here
-            ************************************************************
-             */
             IGameBoard model = new GameBoardMem(rows, cols, numWin);
             TicTacToeView tview = new TicTacToeView(rows, cols);
             TicTacToeController tcontroller = new TicTacToeController(model, tview, players);

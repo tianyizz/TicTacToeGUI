@@ -1,24 +1,14 @@
 package cpsc2150.hw5;
 
 /**
- * The TicTacToe controller class will handle communication between our TicTacToeView and our Model (IGameBoard and BoardPosition)
- *
- * This is where you will write code
- *
- * You will need to include your BoardPosition class, the IGameBoard interface
- * and one of the IGameBoard implementations from Homework 4
- * You can choose which IGameBoard implementation to use
- * If your code was correct you will not need to make any changes to your IGameBoard implementation class besides the package name
- *
- * The code you will write will need to be in the ProcessButtonClick method.
- * This method is called by the screen whenever a player clicks on a button to try to place a marker
+ * The TicTacToe controller class will handle communication between TicTacToeView and our Model (IGameBoard and BoardPosition)
  */
 public class TicTacToeController{
     //our current game that is being played
     private IGameBoard curGame;
     //to track who's turn it is
 
-    //The screen that provides our view
+    //The screen that provides view
     private TicTacToeView screen;
 
 
@@ -35,7 +25,7 @@ public class TicTacToeController{
 
 
     /**
-     * Our constructor makes sure our controller knows about the model and the view
+     * constructor makes sure our controller knows about the model and the view
      * @param model the board implementation
      * @param view the screen that is shown
      * @param np the number of players
